@@ -1,0 +1,157 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+  }
+  
+  header .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .right ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .right ul li{
+    list-style-type: none;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  
+  header .right ul li:hover{
+    color: var(--primary);
+  }
+  
+  header .right .cart{
+    font-size: 30px;
+    margin: 0 2rem;
+    cursor: pointer;
+  }
+  
+  header .left .logo span{
+    color: var(--primary);
+  }
+  
+  header .right .cart:hover{
+    color: var(--primary);
+  }
+  
+  header .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .left .toggle{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    margin: 0 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.btn{
+    padding: 0.5rem 2rem;
+    outline: none;
+    border: none;
+    background: #fff;
+    color: var(--primary);
+    margin: 0 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary{
+    background: var(--primary) !important;
+    color: #fff !important;
+  }
+  
+  .btn-secondary:hover{
+    background: #eee !important;
+    color: var(--primary) !important;
+  }
+  
+  .btn:hover{
+    background: var(--primary);
+    color: #fff;
+  }
+  
+@media (max-width: 999px){
+    .banner p{
+      text-align: justify;
+    }
+    
+    header{
+      flex-direction: column;
+    }
+    
+    header .left{
+      margin-bottom: 1rem;
+    }
+    
+    header .right ul li{
+      margin: 0 0.8rem;
+    }
+    
+    .banner{
+      margin: 2rem 0;
+      flex-direction: column;
+    }
+    
+    .banner .right{
+      margin: 2rem 0;
+    }
+    
+    .cards{
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 650px){
+    header .right{
+      display: none;
+    }
+    
+    header .left .toggle{
+      display: flex;
+      font-size: 40px;
+    }
+    
+    header .left{
+      justify-content: space-around;
+      width: 100%;
+    }
+    
+    body.active header .right{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    body.active header{
+      background: #fff;
+      transition: 0s;
+    }
+    
+    body.active header .right ul{
+      flex-direction: column;
+    }
+    
+    body.active header .right ul li{
+      margin: 1rem 0;
+    }
+    
+    body.active header .right .cart{
+      margin: 1rem 0;
+    }
+    
+    .banner .left, .banner .right{
+      width: auto;
+      padding: 0 1rem;
+    }
+  }
